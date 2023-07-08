@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlaneSpawner : MonoBehaviour
 {
     [SerializeField] List<GameObject> plane;
+    [SerializeField] List<GameObject> empty;
     [SerializeField] List<GameObject> AllPlanes;
     int NextSpawnPosZ = 12;
     void Start()
@@ -14,15 +15,28 @@ public class PlaneSpawner : MonoBehaviour
     }
     public void SpawnNewPlane() 
     {
-        GameObject newPlane = Instantiate(plane[Random.Range(0,plane.Count)], transform);
+        int random = Random.Range(0, 101);
+        if (random <= 70)
+        {
+            SetPlane(plane);
+        }
+        else 
+        {
+            SetPlane(empty);
+        }
+ 
+        NextSpawnPosZ += 6;
+    }
+    private void SetPlane(List<GameObject> planes) 
+    {
+        GameObject newPlane = Instantiate(planes[Random.Range(0, planes.Count)], transform);
         newPlane.transform.position = new Vector3(0, 0, NextSpawnPosZ);
         AllPlanes.Add(newPlane);
-        if (AllPlanes.Count > 8) 
+        if (AllPlanes.Count > 8)
         {
             Destroy(AllPlanes[0]);
             AllPlanes.RemoveAt(0);
         }
-        NextSpawnPosZ += 6;
     }
     public void Restart() 
     {

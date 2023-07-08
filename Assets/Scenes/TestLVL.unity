@@ -236,6 +236,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 1302454391424337874, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7265753236172039601, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -284,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2 Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8043135081429974795, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -297,6 +305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 3718872819230885477, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4997320398682973190, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -345,6 +357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5625520128415219388, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -363,9 +379,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 508014308}
     m_Modifications:
+    - target: {fileID: 849916716881083474, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
       propertyPath: m_Name
       value: Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3806059847920466804, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
       propertyPath: m_RootOrder
@@ -448,6 +472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 66722000392640099, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 839600147861802201, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -491,6 +519,10 @@ PrefabInstance:
     - target: {fileID: 839600147861802201, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034432706162208442, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -635,6 +667,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree2 Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4361799215061557347, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685417786199054522, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -655,7 +695,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1297523024137357736, guid: dc0394e9fee7ae547ba79ba597da6911, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1297523024137357736, guid: dc0394e9fee7ae547ba79ba597da6911, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1136,6 +1176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush3 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1179,6 +1223,10 @@ PrefabInstance:
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583822119366284611, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1240,6 +1288,14 @@ PrefabInstance:
     - target: {fileID: 4361799215061557347, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
       propertyPath: m_Name
       value: Tree2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361799215061557347, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685417786199054522, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1306,6 +1362,14 @@ PrefabInstance:
     - target: {fileID: 4050722294220695759, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
       propertyPath: m_Name
       value: Tree Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050722294220695759, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024545587943755798, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1414,7 +1478,7 @@ RectTransform:
   - {fileID: 645322978}
   - {fileID: 1226426567}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1495,6 +1559,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 3718872819230885477, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4997320398682973190, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1543,6 +1611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5625520128415219388, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1564,6 +1636,10 @@ PrefabInstance:
     - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_Name
       value: Bush3 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_RootOrder
@@ -1609,6 +1685,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6583822119366284611, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1629,7 +1709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508014308}
   - component: {fileID: 508014309}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1668,6 +1748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane:
+  - {fileID: 3629391239954754464, guid: ffc1125ff1ab8d54fb8ffa7d17c64cf6, type: 3}
+  - {fileID: 3629391239954754464, guid: e8c034d4a3ee7474d9cd3f359dc549fc, type: 3}
+  empty:
   - {fileID: 3629391239954754464, guid: f03a84c6cf661da43b51ac28a3becebc, type: 3}
   - {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
   - {fileID: 3629391239954754464, guid: bc8da25f9d0f61947a4e4f6a462e0a0b, type: 3}
@@ -1746,6 +1829,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 1302454391424337874, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7265753236172039601, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1794,6 +1881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8043135081429974795, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1825,6 +1916,10 @@ PrefabInstance:
     - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_Name
       value: Bush3 Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_RootOrder
@@ -1869,6 +1964,10 @@ PrefabInstance:
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583822119366284611, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2014,6 +2113,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush2 Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4562766504402634059, guid: 30097e0bbd5acce4580a6ef4e0fad748, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818842900858879378, guid: 30097e0bbd5acce4580a6ef4e0fad748, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2036,9 +2143,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 849916716881083474, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
       propertyPath: m_Name
       value: Plane (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3806059847920466804, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
       propertyPath: m_RootOrder
@@ -2169,6 +2284,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4562766504402634059, guid: 30097e0bbd5acce4580a6ef4e0fad748, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818842900858879378, guid: 30097e0bbd5acce4580a6ef4e0fad748, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2195,6 +2318,10 @@ PrefabInstance:
     - target: {fileID: 66722000392640099, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
       propertyPath: m_Name
       value: Rock Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 66722000392640099, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 839600147861802201, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
       propertyPath: m_RootOrder
@@ -2240,6 +2367,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9034432706162208442, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2261,6 +2392,10 @@ PrefabInstance:
     - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_Name
       value: Bush3 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_RootOrder
@@ -2305,6 +2440,10 @@ PrefabInstance:
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583822119366284611, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2608,6 +2747,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4050722294220695759, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024545587943755798, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2621,6 +2768,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 1302454391424337874, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7265753236172039601, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2669,6 +2820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2 Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8043135081429974795, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2687,6 +2842,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 3718872819230885477, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4997320398682973190, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2735,6 +2894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5625520128415219388, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2757,9 +2920,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 849916716881083474, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
       propertyPath: m_Name
       value: Plane (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3806059847920466804, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
       propertyPath: m_RootOrder
@@ -2893,6 +3064,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050722294220695759, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024545587943755798, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2911,6 +3090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 3718872819230885477, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4997320398682973190, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2959,6 +3142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5625520128415219388, guid: af53b4b7356398b4d8ea95de30c0df8d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2977,6 +3164,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 1302454391424337874, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7265753236172039601, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3024,6 +3215,10 @@ PrefabInstance:
     - target: {fileID: 8043135081429974795, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
       propertyPath: m_Name
       value: Rock2 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043135081429974795, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3338,6 +3533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 66722000392640099, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 839600147861802201, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3382,6 +3581,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9034432706162208442, guid: 512693bb5a1cc5742825b22645e7aee4, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3401,7 +3604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357840962}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DefaultEnv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3460,6 +3663,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357840962}
     m_Modifications:
+    - target: {fileID: 1302454391424337874, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7265753236172039601, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -3508,6 +3715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8043135081429974795, guid: 86e4cb5b0eea1fb4499c20f0cf2786b3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3524,6 +3735,10 @@ PrefabInstance:
     - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_Name
       value: Bush3 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797760893118360986, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_RootOrder
@@ -3568,6 +3783,10 @@ PrefabInstance:
     - target: {fileID: 3285503579199960864, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583822119366284611, guid: 9b6567beb5be300439b777ce3022fad6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3762,6 +3981,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050722294220695759, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024545587943755798, guid: 379f638fc096bda45a5a23751e3c1d4e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3932,6 +4159,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush2 Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4562766504402634059, guid: 30097e0bbd5acce4580a6ef4e0fad748, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818842900858879378, guid: 30097e0bbd5acce4580a6ef4e0fad748, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3997,6 +4232,14 @@ PrefabInstance:
     - target: {fileID: 4361799215061557347, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
       propertyPath: m_Name
       value: Tree2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361799215061557347, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685417786199054522, guid: 6f79dab327ab6384a86ef0cb4ad4e4b0, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
