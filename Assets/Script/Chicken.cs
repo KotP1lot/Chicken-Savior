@@ -40,10 +40,10 @@ public class Chicken : MonoBehaviour
         if (IsGrounded && ReadyForJump)
         {
             ReadyForJump = false;
-            bool canJumpForward = !CheckIsBarierForward();
-            bool canJumpLeft = !CheckIsBarierLeft();
-            bool canJumpRight = !CheckIsBarierRight();
-            if (!canJumpForward)
+            bool canJumpForward = !CheckIsBarier(Side.Forward);
+            bool canJumpLeft = !CheckIsBarier(Side.Left);
+            bool canJumpRight = !CheckIsBarier(Side.Right);
+            if (!canJumpForward && canJumpRight && canJumpLeft)
             {
                 Debug.Log("Cant FRWRD");
                 random = Random.Range(0, 2);
@@ -56,7 +56,7 @@ public class Chicken : MonoBehaviour
                     MoveChicken(Side.Left);
                 }
             }
-            else if (!canJumpLeft)
+            else if (!canJumpLeft && canJumpForward && canJumpRight)
             {
                 Debug.Log("Cant LFT");
                 random = Random.Range(0, 101);
@@ -69,7 +69,7 @@ public class Chicken : MonoBehaviour
                     MoveChicken(Side.Right);
                 }
             }
-            else if (!canJumpRight)
+            else if (!canJumpRight && canJumpForward && canJumpLeft)
             {
                 Debug.Log("Cant RGHT");
                 random = Random.Range(0, 101);
@@ -81,6 +81,14 @@ public class Chicken : MonoBehaviour
                 {
                     MoveChicken(Side.Left);
                 }
+            }
+            else if (!canJumpForward && !canJumpLeft)
+            {
+                MoveChicken(Side.Right);
+            }
+            else if (!canJumpForward && !canJumpRight) 
+            {
+                MoveChicken(Side.Left);
             }
             else
             {
@@ -120,22 +128,27 @@ public class Chicken : MonoBehaviour
                 break;
         }
     }
-
-    bool CheckIsBarierForward() 
+    bool CheckIsBarier(Side side) 
     {
-        Debug.DrawRay(transform.position, Vector3.forward,  Color.yellow, barierCheckDistance);
-        return Physics.Raycast(transform.position, Vector3.forward, barierCheckDistance, BarierMask);
+        switch (side)
+        {
+            case Side.Left:
+                Debug.DrawRay(transform.position, Vector3.left, Color.red, barierCheckDistance);
+                return Physics.Raycast(transform.position, Vector3.left, barierCheckDistance, BarierMask);
+                break; 
+            case Side.Right:
+                Debug.DrawRay(transform.position, Vector3.right, Color.green, barierCheckDistance);
+                return Physics.Raycast(transform.position, Vector3.right, barierCheckDistance, BarierMask);
+                break; 
+            default:
+                Debug.DrawRay(transform.position, Vector3.forward, Color.yellow, barierCheckDistance);
+                return Physics.Raycast(transform.position, Vector3.forward, barierCheckDistance, BarierMask);
+                break;
+        
+        }
+    
     }
-    bool CheckIsBarierLeft() 
-    {
-        Debug.DrawRay(transform.position, Vector3.left, Color.red, barierCheckDistance);
-        return Physics.Raycast(transform.position, Vector3.left, barierCheckDistance, BarierMask);
-    }
-    bool CheckIsBarierRight() 
-    {
-        Debug.DrawRay(transform.position, Vector3.right, Color.green, barierCheckDistance);
-        return Physics.Raycast(transform.position, Vector3.right, barierCheckDistance, BarierMask);
-    }
+   
     bool CheckIsGround()
     {
         return Physics.Raycast((transform.position + Vector3.up * 0.1f), Vector3.down, groundCheckDistance, GroundMask);
