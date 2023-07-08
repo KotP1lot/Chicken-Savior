@@ -14,7 +14,7 @@ public class Chicken : MonoBehaviour
     [SerializeField] LayerMask BarierMask;
     [SerializeField] float jumpForce = 12f;
     [SerializeField] float groundCheckDistance = 0.3f;
-    [SerializeField] float barierCheckDistance = 0.3f;
+    [SerializeField] float barierCheckDistance = 2f;
     bool PrevIsGrounded = false;
     bool IsGrounded = false;
     bool ReadyForJump = false;
@@ -35,7 +35,7 @@ public class Chicken : MonoBehaviour
         if (PrevIsGrounded != IsGrounded && IsGrounded) 
         {
             //подумати
-            StartCoroutine(WaitForNexJump(1f));
+            StartCoroutine(WaitForNexJump(0.1f));
         }
         if (IsGrounded && ReadyForJump)
         {
@@ -60,7 +60,7 @@ public class Chicken : MonoBehaviour
             {
                 Debug.Log("Cant LFT");
                 random = Random.Range(0, 101);
-                if (random <= 70)
+                if (random <= 80)
                 {
                     MoveChicken(Side.Forward);
                 }
@@ -73,7 +73,7 @@ public class Chicken : MonoBehaviour
             {
                 Debug.Log("Cant RGHT");
                 random = Random.Range(0, 101);
-                if (random <= 70)
+                if (random <= 80)
                 {
                     MoveChicken(Side.Forward);
                 }
@@ -93,15 +93,15 @@ public class Chicken : MonoBehaviour
             else
             {
                 random = Random.Range(0, 100);
-                if (random <= 70)
+                if (random <= 80)
                 {
                     MoveChicken(Side.Forward);
                 }
-                else if (random > 70 && random <= 85)
+                else if (random > 80 && random <= 90)
                 {
                     MoveChicken(Side.Right);
                 }
-                else if (random > 85 && random <= 100)
+                else if (random > 90 && random <= 100)
                 {
                     MoveChicken(Side.Left);
                 }
@@ -130,22 +130,39 @@ public class Chicken : MonoBehaviour
     }
     bool CheckIsBarier(Side side) 
     {
-        Collider[] collisions = null;
+        Vector3 position = transform.position;
+        Vector3 size = transform.localScale;
+
         switch (side)
         {
             case Side.Left:
-                //Debug.DrawRay(transform.position, Vector3.left, Color.red, barierCheckDistance);
-                return Physics.Raycast(transform.position, Vector3.left, barierCheckDistance, BarierMask);
-                break; 
+                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0.8f), Vector3.left, Color.red, barierCheckDistance);
+                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0f), Vector3.left, Color.red, barierCheckDistance);
+                Debug.DrawRay(position + new Vector3(0f, 0.5f, -0.8f), Vector3.left, Color.red, barierCheckDistance);
+                
+                return Physics.Raycast(position + new Vector3(0f, 0.5f, 0.8f), Vector3.left, barierCheckDistance, BarierMask)
+                || Physics.Raycast(position + new Vector3(0f, 0.5f, -0.8f), Vector3.left, barierCheckDistance, BarierMask)
+                      || Physics.Raycast(position + new Vector3(0f, 0.5f, 0f), Vector3.left, barierCheckDistance, BarierMask);
+    
             case Side.Right:
-               // Debug.DrawRay(transform.position, Vector3.right, Color.green, barierCheckDistance);
-                return Physics.Raycast(transform.position, Vector3.right, barierCheckDistance, BarierMask);
-                break; 
+                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0.8f), Vector3.right, Color.yellow, barierCheckDistance);
+                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0f), Vector3.right, Color.yellow, barierCheckDistance);
+                Debug.DrawRay(position + new Vector3(0f, 0.5f, -0.8f), Vector3.right, Color.yellow, barierCheckDistance);
+                
+                return Physics.Raycast(position + new Vector3(0f, 0.5f, 0.8f), Vector3.right, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(position + new Vector3(0f, 0.5f, -0.8f), Vector3.right, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(position + new Vector3(0f, 0.5f, 0f), Vector3.right, barierCheckDistance, BarierMask);
+   
             default:
-             //   Debug.DrawRay(transform.position, Vector3.forward, Color.yellow, barierCheckDistance);
-                return Physics.Raycast(transform.position, Vector3.forward, barierCheckDistance, BarierMask);
-                break;
-        
+                Debug.DrawRay(position + new Vector3(0.8f, 0.5f, 0), Vector3.forward, Color.black, barierCheckDistance);
+                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0), Vector3.forward, Color.black, barierCheckDistance);
+                Debug.DrawRay(position + new Vector3(-0.8f, 0.5f, 0), Vector3.forward, Color.black, barierCheckDistance);
+               
+                return Physics.Raycast(position + new Vector3(-0.8f, 0.5f, 0), Vector3.forward, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(position + new Vector3(0.8f, 0.5f, 0), Vector3.forward, barierCheckDistance, BarierMask)
+               || Physics.Raycast(position + new Vector3(0f, 0.5f, 0f), Vector3.forward, barierCheckDistance, BarierMask);
+     
+
         }
     
     }
@@ -161,4 +178,5 @@ public class Chicken : MonoBehaviour
         transform.eulerAngles = newRotation;
         //transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.Round(transform.position.z));
     }
+
 }

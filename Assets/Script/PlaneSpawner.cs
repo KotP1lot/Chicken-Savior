@@ -10,6 +10,7 @@ public class PlaneSpawner : MonoBehaviour
     void Start()
     {
         SpawnNewPlane();
+        SpawnNewPlane();
     }
     public void SpawnNewPlane() 
     {
