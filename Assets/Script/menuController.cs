@@ -56,6 +56,8 @@ public class menuController : MonoBehaviour
         if (volumeSlider != null)
         {
             AudioListener.volume = volumeSlider.value;
+            PlayerPrefs.SetFloat("volume", AudioListener.volume);
+            PlayerPrefs.Save();
         }
     }
 
