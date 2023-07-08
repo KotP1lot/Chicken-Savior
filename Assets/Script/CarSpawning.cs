@@ -20,7 +20,7 @@ public class CarSpawning : MonoBehaviour
     void SpawnObject()
     {
         Quaternion rotation = Quaternion.Euler(0f, transform.rotation.y, 0f);
-        Instantiate(objectPrefab[Random.Range(0,count)], spawnPoint, rotation);
+        Instantiate(objectPrefab[Random.Range(0,count)], spawnPoint, rotation, transform.parent);
         Invoke("SpawnObject", Random.Range(minSpawnDelay, maxSpawnDelay));
     }
 }
