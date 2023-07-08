@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 3806059847920466804}
   - component: {fileID: 7741764974300129927}
   - component: {fileID: -2520344546240630541}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GrPlane2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
