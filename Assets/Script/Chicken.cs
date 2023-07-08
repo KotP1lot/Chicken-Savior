@@ -130,18 +130,19 @@ public class Chicken : MonoBehaviour
     }
     bool CheckIsBarier(Side side) 
     {
+        Collider[] collisions = null;
         switch (side)
         {
             case Side.Left:
-                Debug.DrawRay(transform.position, Vector3.left, Color.red, barierCheckDistance);
+                //Debug.DrawRay(transform.position, Vector3.left, Color.red, barierCheckDistance);
                 return Physics.Raycast(transform.position, Vector3.left, barierCheckDistance, BarierMask);
                 break; 
             case Side.Right:
-                Debug.DrawRay(transform.position, Vector3.right, Color.green, barierCheckDistance);
+               // Debug.DrawRay(transform.position, Vector3.right, Color.green, barierCheckDistance);
                 return Physics.Raycast(transform.position, Vector3.right, barierCheckDistance, BarierMask);
                 break; 
             default:
-                Debug.DrawRay(transform.position, Vector3.forward, Color.yellow, barierCheckDistance);
+             //   Debug.DrawRay(transform.position, Vector3.forward, Color.yellow, barierCheckDistance);
                 return Physics.Raycast(transform.position, Vector3.forward, barierCheckDistance, BarierMask);
                 break;
         
@@ -158,6 +159,6 @@ public class Chicken : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         transform.eulerAngles = newRotation;
-        transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.Round(transform.position.z));
+        //transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.Round(transform.position.z));
     }
 }

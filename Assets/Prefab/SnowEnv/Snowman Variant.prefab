@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a0f35b9b8008dca4da03bd44236403f1, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0f35b9b8008dca4da03bd44236403f1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57,12 +57,20 @@ PrefabInstance:
       value: Snowman Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a0f35b9b8008dca4da03bd44236403f1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0f35b9b8008dca4da03bd44236403f1, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: a0f35b9b8008dca4da03bd44236403f1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: a0f35b9b8008dca4da03bd44236403f1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84,7 +92,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2322382892082348591}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 61a2959d78232c04b8a8a7c844c25bd7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

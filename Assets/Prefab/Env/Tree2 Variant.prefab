@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 55a6b5d0728fc5e45a08a13070c5434a, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55a6b5d0728fc5e45a08a13070c5434a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -57,12 +57,20 @@ PrefabInstance:
       value: Tree2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 55a6b5d0728fc5e45a08a13070c5434a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55a6b5d0728fc5e45a08a13070c5434a, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 55a6b5d0728fc5e45a08a13070c5434a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 55a6b5d0728fc5e45a08a13070c5434a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84,7 +92,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4685417786199054522}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 61a2959d78232c04b8a8a7c844c25bd7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
