@@ -44,7 +44,7 @@ public class CarMovement : MonoBehaviour
                 }
             }
         }
-
+    
         if (Input.GetMouseButton(0) && !isMoving)
         {
             float mouseX = Input.GetAxis("Mouse X");
