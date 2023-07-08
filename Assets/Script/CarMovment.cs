@@ -9,12 +9,17 @@ public class CarMovement : MonoBehaviour
     private Rigidbody rb;
     private Vector3 velocity;
     private bool isMoving = true;
+    private float tmpmin,tmpmax;
+    private Vector3 startPosition;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         velocity = new Vector3(Random.Range(minSpeed, maxSpeed),0, 0);
     }
-
+    void ChangeMass(float newMass)
+    {
+        rb.mass = newMass;
+    }
     void Update()
     {
         if (isMoving && IsOnGround())
@@ -23,7 +28,7 @@ public class CarMovement : MonoBehaviour
         }
         else if (!IsOnGround())
         {
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -33,8 +38,9 @@ public class CarMovement : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider.gameObject == gameObject)
-                {
+                {                    
                     isMoving = !isMoving;
+                    rb.velocity -= velocity;
                 }
             }
         }
@@ -59,13 +65,14 @@ public class CarMovement : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isMoving = true;
+         
         }
     }
 
     private bool IsOnGround()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, -transform.up, out hit, 1f, groundLayer))
+        if (Physics.Raycast(transform.position, -transform.up, out hit,12f, groundLayer))
         {
             return true;
         }
