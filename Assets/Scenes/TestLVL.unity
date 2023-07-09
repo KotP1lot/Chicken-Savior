@@ -1791,12 +1791,13 @@ MonoBehaviour:
   - {fileID: 3629391239954754464, guid: ffc1125ff1ab8d54fb8ffa7d17c64cf6, type: 3}
   - {fileID: 3629391239954754464, guid: e8c034d4a3ee7474d9cd3f359dc549fc, type: 3}
   - {fileID: 3629391239954754464, guid: fb67868824bde1144945dc76468d0594, type: 3}
-  - {fileID: 674191154514067133, guid: ab30961eaacff0b4d96667c23fd68ef7, type: 3}
-  - {fileID: 3977401051402783855, guid: a7c3d497c19f22442a0899eb82e612ab, type: 3}
   empty:
   - {fileID: 3629391239954754464, guid: f03a84c6cf661da43b51ac28a3becebc, type: 3}
   - {fileID: 3629391239954754464, guid: 5a71d9ec266e7f44d832f90a5d709768, type: 3}
   - {fileID: 3629391239954754464, guid: bc8da25f9d0f61947a4e4f6a462e0a0b, type: 3}
+  water:
+  - {fileID: 674191154514067133, guid: ab30961eaacff0b4d96667c23fd68ef7, type: 3}
+  - {fileID: 3977401051402783855, guid: a7c3d497c19f22442a0899eb82e612ab, type: 3}
   AllPlanes: []
 --- !u!1001 &551623097
 PrefabInstance:

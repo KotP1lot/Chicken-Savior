@@ -5,6 +5,7 @@ public class PlaneSpawner : MonoBehaviour
 {
     [SerializeField] List<GameObject> plane;
     [SerializeField] List<GameObject> empty;
+    [SerializeField] List<GameObject> water;
     [SerializeField] List<GameObject> AllPlanes;
     int NextSpawnPosZ = 12;
     void Start()
@@ -18,11 +19,15 @@ public class PlaneSpawner : MonoBehaviour
         else
         {
             int random = Random.Range(0, 101);
-            if (random <= 70)
+            if (random <= 60)
             {
                 SetPlane(plane);
             }
-            else
+            else if (random > 60 && random <= 80)
+            {
+                SetPlane(water);
+            }
+            else 
             {
                 SetPlane(empty);
             }
