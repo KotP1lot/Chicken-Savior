@@ -15,6 +15,7 @@ public class Chicken : MonoBehaviour
     [SerializeField] float jumpForce = 12f;
     [SerializeField] float groundCheckDistance = 0.3f;
     [SerializeField] float barierCheckDistance = 2f;
+    Collider collider;
     bool PrevIsGrounded = false;
     bool IsGrounded = false;
     //bool ReadyForJump = false;
@@ -23,6 +24,7 @@ public class Chicken : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        collider = GetComponent<Collider>();
     }
     //IEnumerator WaitForNexJump(float time) 
     //{
@@ -128,48 +130,43 @@ public class Chicken : MonoBehaviour
                 break;
         }
     }
-    bool CheckIsBarier(Side side) 
+    bool CheckIsBarier(Side side)
     {
         Vector3 position = transform.position;
-        Vector3 size = transform.localScale;
-
         switch (side)
         {
             case Side.Left:
-                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0.8f), Vector3.left, Color.red, barierCheckDistance);
-                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0f), Vector3.left, Color.red, barierCheckDistance);
-                Debug.DrawRay(position + new Vector3(0f, 0.5f, -0.8f), Vector3.left, Color.red, barierCheckDistance);
-                
-                return Physics.Raycast(position + new Vector3(0f, 0.5f, 0.8f), Vector3.left, barierCheckDistance, BarierMask)
-                || Physics.Raycast(position + new Vector3(0f, 0.5f, -0.8f), Vector3.left, barierCheckDistance, BarierMask)
-                      || Physics.Raycast(position + new Vector3(0f, 0.5f, 0f), Vector3.left, barierCheckDistance, BarierMask);
-    
-            case Side.Right:
-                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0.8f), Vector3.right, Color.yellow, barierCheckDistance);
-                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0f), Vector3.right, Color.yellow, barierCheckDistance);
-                Debug.DrawRay(position + new Vector3(0f, 0.5f, -0.8f), Vector3.right, Color.yellow, barierCheckDistance);
-                
-                return Physics.Raycast(position + new Vector3(0f, 0.5f, 0.8f), Vector3.right, barierCheckDistance, BarierMask)
-                    || Physics.Raycast(position + new Vector3(0f, 0.5f, -0.8f), Vector3.right, barierCheckDistance, BarierMask)
-                    || Physics.Raycast(position + new Vector3(0f, 0.5f, 0f), Vector3.right, barierCheckDistance, BarierMask);
-   
-            default:
-                Debug.DrawRay(position + new Vector3(0.8f, 0.5f, 0), Vector3.forward, Color.black, barierCheckDistance);
-                Debug.DrawRay(position + new Vector3(0f, 0.5f, 0), Vector3.forward, Color.black, barierCheckDistance);
-                Debug.DrawRay(position + new Vector3(-0.8f, 0.5f, 0), Vector3.forward, Color.black, barierCheckDistance);
-               
-                return Physics.Raycast(position + new Vector3(-0.8f, 0.5f, 0), Vector3.forward, barierCheckDistance, BarierMask)
-                    || Physics.Raycast(position + new Vector3(0.8f, 0.5f, 0), Vector3.forward, barierCheckDistance, BarierMask)
-               || Physics.Raycast(position + new Vector3(0f, 0.5f, 0f), Vector3.forward, barierCheckDistance, BarierMask);
-     
+                Vector3 centerL = new Vector3(collider.bounds.center.x - collider.bounds.extents.x, transform.position.y, transform.position.z);
+                Debug.DrawLine(centerL, centerL + new Vector3(-2, 0, 0), Color.red, 5);
+                return Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, 0.95f), Vector3.left, barierCheckDistance, BarierMask)
+                      || Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, -0.95f), Vector3.left, barierCheckDistance, BarierMask)
+                      || Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, 0f), Vector3.left, barierCheckDistance, BarierMask);
 
+            case Side.Right:
+                Vector3 centerR = new Vector3(collider.bounds.center.x + collider.bounds.extents.x, transform.position.y, transform.position.z);
+                Debug.DrawLine(centerR, centerR + new Vector3(2, 0, 0), Color.red, 5);
+                return Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, 0.95f), Vector3.right, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, -0.95f), Vector3.right, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, 0f), Vector3.right, barierCheckDistance, BarierMask);
+
+            default:
+            
+                Vector3 centerF = new Vector3(transform.position.x, transform.position.y, collider.bounds.center.z + collider.bounds.extents.z);
+                Debug.Log("sdadas");
+                Debug.DrawLine(centerF, centerF + new Vector3(0, 0, 2), Color.red,5);
+                return Physics.Raycast(centerF + new Vector3(-0.95f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(centerF + new Vector3(0.95f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(centerF + new Vector3(0f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask);
         }
-    
+
     }
    
     bool CheckIsGround()
     {
-        return Physics.Raycast((transform.position + Vector3.up * 0.1f), Vector3.down, groundCheckDistance, GroundMask);
+        Vector3 position = transform.position;
+        return Physics.Raycast(position + new Vector3(0f, 0f, 0.9f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(0f, 0f, -0.9f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(0f, 0f, 0f), Vector3.down, groundCheckDistance, GroundMask);
     }
 
     void PositionAndRotation(Vector3 newRotation) 

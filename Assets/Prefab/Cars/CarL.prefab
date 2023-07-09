@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarL
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 22d725fdde40fe145b43b6bac1cbe155, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 22d725fdde40fe145b43b6bac1cbe155, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
@@ -71,6 +75,10 @@ PrefabInstance:
     - target: {fileID: 1151388028547126963, guid: 22d725fdde40fe145b43b6bac1cbe155, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 22d725fdde40fe145b43b6bac1cbe155, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -112,6 +120,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  CarMask:
+    serializedVersion: 2
+    m_Bits: 256
+  IsLeft: 1
 --- !u!54 &4884523119778354515
 Rigidbody:
   m_ObjectHideFlags: 0

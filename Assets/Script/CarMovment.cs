@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
     public float minSpeed, maxSpeed, cursorSpeed;
     public LayerMask groundLayer;
+    public LayerMask CarMask;
+    [SerializeField] bool IsLeft;
     private Rigidbody rb;
     private Vector3 velocity;
     private bool isMoving = true;
-    private float tmpmin,tmpmax;
-    private Vector3 startPosition;
+    private bool isMouseDown = false;
+    Collider collider;
     void Start()
     {
+        collider = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
         velocity = new Vector3(Random.Range(minSpeed, maxSpeed),0, 0);
     }
@@ -30,45 +34,53 @@ public class CarMovement : MonoBehaviour
         {
             Destroy(transform.parent.gameObject);
         }
-
-        if (Input.GetMouseButtonDown(0))
+        if (isCarForward() && isMoving && !isMouseDown)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider.gameObject == gameObject)
-                {                    
-                    isMoving = !isMoving;
-                    rb.velocity -= velocity;
-                }
-            }
+            isMoving = false;
+            rb.velocity -= velocity;
         }
-    
-        if (Input.GetMouseButton(0) && !isMoving)
-        {
-            float mouseX = Input.GetAxis("Mouse X");
-
-            if (mouseX < 0)
-            {
-                // –ух миш≥ вл≥во
-                transform.position -= new Vector3(cursorSpeed, 0, 0);
-            }
-            else if (mouseX > 0)
-            {
-                // –ух миш≥ вправо
-                transform.position += new Vector3(cursorSpeed, 0, 0);
-            }
-        }
-
-
-        if (Input.GetMouseButtonUp(0))
+       
+        else if (!isCarForward() && !isMouseDown) 
         {
             isMoving = true;
-         
         }
     }
+    private void OnMouseDown()
+    {
+        isMoving = false;
+        isMouseDown = true;
+        rb.velocity -= velocity;
+    }
+    private void OnMouseDrag()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
 
+        if (mouseX < 0)
+        {
+            // –ух миш≥ вл≥во
+            transform.position -= new Vector3(cursorSpeed, 0, 0);
+        }
+        else if (mouseX > 0)
+        {
+            // –ух миш≥ вправо
+            transform.position += new Vector3(cursorSpeed, 0, 0);
+        }
+    }
+    private void OnMouseUp()
+    {
+        isMoving = true;
+        isMouseDown = false;
+    }
+    private bool isCarForward() 
+    {
+        if (IsLeft) 
+        {
+            Vector3 centerL = new Vector3(collider.bounds.center.x - collider.bounds.extents.x, transform.position.y, transform.position.z);
+            return Physics.Raycast(centerL, Vector3.left, 3, CarMask); 
+        }
+        Vector3 centerR = new Vector3(collider.bounds.center.x + collider.bounds.extents.x, transform.position.y, transform.position.z);
+        return Physics.Raycast(centerR, Vector3.right, 3, CarMask);
+    }
     private bool IsOnGround()
     {
         RaycastHit hit;

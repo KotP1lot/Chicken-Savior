@@ -12,9 +12,8 @@ public class CarSpawning : MonoBehaviour
     void Start()
     { 
         spawnPoint = transform.position;
-        Invoke("SpawnObject", Random.Range(minSpawnDelay, maxSpawnDelay));
+        SpawnObject();
         count = objectPrefab.Count;
-        
     }
 
     void SpawnObject()
