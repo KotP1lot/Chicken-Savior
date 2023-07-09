@@ -10,4 +10,5 @@ public class EventSyst: MonoBehaviour
 {
     public Action<TypeDie> OnDead;
     public Action OnStepForward;
+    public Action OnCarDestroyed;
 }

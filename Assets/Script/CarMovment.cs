@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
+    EventSyst syst;
     public float minSpeed, maxSpeed;
     private float cursorSpeed = 0.1f;
     public LayerMask groundLayer;
@@ -34,6 +32,7 @@ public class CarMovement : MonoBehaviour
         else if (!IsOnGround())
         {
             Destroy(transform.parent.gameObject);
+            syst.OnCarDestroyed?.Invoke();
         }
         if (isCarForward() && isMoving && !isMouseDown)
         {
@@ -90,5 +89,9 @@ public class CarMovement : MonoBehaviour
             return true;
         }
         return false;
+    }
+    private void OnEnable()
+    {
+        syst = GameObject.Find("EventSys").GetComponent<EventSyst>();
     }
 }
