@@ -4,7 +4,7 @@ public class CarMovement : MonoBehaviour
 {
     EventSyst syst;
     public float minSpeed, maxSpeed;
-    private float cursorSpeed = 0.1f;
+    private float cursorSpeed;
     public LayerMask groundLayer;
     public LayerMask CarMask;
     [SerializeField] bool IsLeft;
@@ -18,6 +18,7 @@ public class CarMovement : MonoBehaviour
         col = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
         velocity = new Vector3(Random.Range(minSpeed, maxSpeed),0, 0);
+        cursorSpeed = PlayerPrefs.GetFloat("cursorSpeed", 0.05f);
     }
     void ChangeMass(float newMass)
     {
