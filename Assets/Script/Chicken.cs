@@ -17,6 +17,8 @@ public class Chicken : MonoBehaviour
     [SerializeField] float groundCheckDistance = 0.3f;
     [SerializeField] float barierCheckDistance = 2f;
     Collider col;
+    AudioSource audioSource;
+    [SerializeField]AudioClip clip;
     Vector3 pos;
     EventSyst syst;
     bool IsGrounded = false;
@@ -27,6 +29,7 @@ public class Chicken : MonoBehaviour
     
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();  
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
     }
@@ -178,7 +181,7 @@ public class Chicken : MonoBehaviour
     }
     void OnDead(TypeDie typeDie) 
     {
-
+        audioSource.PlayOneShot(clip);
         switch (typeDie)
         {
             case TypeDie.Car:
