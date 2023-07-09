@@ -166,11 +166,8 @@ public class Chicken : MonoBehaviour
     bool CheckIsGround()
     {
         Vector3 position = transform.position;
-        Debug.DrawRay(position + new Vector3(0f, 0f, -0.6f), Vector3.down, Color.red);
-        Debug.DrawRay(position + new Vector3(0f, 0f, -0.3f), Vector3.down, Color.red);
-        Debug.DrawRay(position + new Vector3(0f, 0f, 0f), Vector3.down, Color.red);
-        return Physics.Raycast(position + new Vector3(0f, 0f, 0.3f), Vector3.down, groundCheckDistance, GroundMask)
-            || Physics.Raycast(position + new Vector3(0f, 0f, -0.6f), Vector3.down, groundCheckDistance, GroundMask)
+        return Physics.Raycast(position + new Vector3(0f, 0f, 0.95f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(0f, 0f, -0.95f), Vector3.down, groundCheckDistance, GroundMask)
             || Physics.Raycast(position + new Vector3(0f, 0f, 0f), Vector3.down, groundCheckDistance, GroundMask);
     }
 
