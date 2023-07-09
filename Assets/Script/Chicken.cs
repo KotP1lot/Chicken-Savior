@@ -17,29 +17,29 @@ public class Chicken : MonoBehaviour
     [SerializeField] float barierCheckDistance = 2f;
     bool PrevIsGrounded = false;
     bool IsGrounded = false;
-    bool ReadyForJump = false;
+    //bool ReadyForJump = false;
     int random = 0;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
-    IEnumerator WaitForNexJump(float time) 
-    {
-        yield return new WaitForSeconds(time);
-        ReadyForJump = true;
-    }
-    private void Update()
+    //IEnumerator WaitForNexJump(float time) 
+    //{
+    //    yield return new WaitForSeconds(time);
+    //    ReadyForJump = true;
+    //}
+    private void FixedUpdate()
     {
         IsGrounded = CheckIsGround();
-        if (PrevIsGrounded != IsGrounded && IsGrounded) 
+        //if (PrevIsGrounded != IsGrounded && IsGrounded) 
+        //{
+        //    //подумати
+        //    StartCoroutine(WaitForNexJump(0.1f));
+        //}
+        if (IsGrounded) //&& ReadyForJump)
         {
-            //подумати
-            StartCoroutine(WaitForNexJump(0.1f));
-        }
-        if (IsGrounded && ReadyForJump)
-        {
-            ReadyForJump = false;
+        //    ReadyForJump = false;
             bool canJumpForward = !CheckIsBarier(Side.Forward);
             bool canJumpLeft = !CheckIsBarier(Side.Left);
             bool canJumpRight = !CheckIsBarier(Side.Right);
