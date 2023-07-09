@@ -706,7 +706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1297523024137357736, guid: dc0394e9fee7ae547ba79ba597da6911, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.92
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1297523024137357736, guid: dc0394e9fee7ae547ba79ba597da6911, type: 3}
       propertyPath: m_LocalPosition.y
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152632982484458841, guid: dc0394e9fee7ae547ba79ba597da6911, type: 3}
       propertyPath: m_Size.z
-      value: 0.65510535
+      value: 1.0458035
       objectReference: {fileID: 0}
     - target: {fileID: 9152632982484458841, guid: dc0394e9fee7ae547ba79ba597da6911, type: 3}
       propertyPath: m_Center.x
@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152632982484458841, guid: dc0394e9fee7ae547ba79ba597da6911, type: 3}
       propertyPath: m_Center.z
-      value: 0.36122835
+      value: 0.30195022
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4395,7 +4395,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 509
+    m_Bits: 505
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
