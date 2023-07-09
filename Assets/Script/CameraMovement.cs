@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    Camera camera;
+    Camera cam;
     [SerializeField]Transform chicken;
     // Start is called before the first frame update
     void Start()
     {
-        camera = Camera.main;
+        cam = Camera.main;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        camera.transform.position = new Vector3(transform.position.x, transform.position.y, chicken.position.z-16);
+        cam.transform.position = new Vector3(transform.position.x, transform.position.y, chicken.position.z-16);
     }
 }

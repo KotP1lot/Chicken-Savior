@@ -80,6 +80,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: c37912d1e87c1d74692fc79615198ec7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2638265545189722165}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: c37912d1e87c1d74692fc79615198ec7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4419630105251761072}
   m_SourcePrefab: {fileID: 100100000, guid: c37912d1e87c1d74692fc79615198ec7, type: 3}
 --- !u!1 &879928191435754356 stripped
 GameObject:
@@ -147,13 +150,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 10
-  cursorSpeed: 0.05
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   CarMask:
     serializedVersion: 2
     m_Bits: 256
+  IsLeft: 0
 --- !u!54 &842979479783286264
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -204,3 +207,15 @@ CapsuleCollider:
   m_Height: 4.517313
   m_Direction: 0
   m_Center: {x: 0.08042765, y: 0.16155791, z: 0.0025553703}
+--- !u!114 &4419630105251761072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8195401127014052781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24421955b5454e140a07c03b6ccb3332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -129,7 +129,7 @@ namespace TrueClouds
         protected virtual void Awake()
         {
             _camera = GetComponent<Camera>();
-            GameObject child = new GameObject("cloud camera");
+            GameObject child = new GameObject("cloud cam");
             child.hideFlags = HideFlags.HideAndDontSave;
 
             child.transform.parent = transform;

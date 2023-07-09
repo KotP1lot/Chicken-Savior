@@ -15,11 +15,19 @@ public class CarSpawning : MonoBehaviour
         SpawnObject();
         count = objectPrefab.Count;
     }
-
+    IEnumerator Wait() 
+    {
+        yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
+        SpawnObject();
+    }
     void SpawnObject()
     {
         Quaternion rotation = Quaternion.Euler(0f, transform.rotation.y, 0f);
         Instantiate(objectPrefab[Random.Range(0,count)], spawnPoint, rotation, transform.parent);
-        Invoke("SpawnObject", Random.Range(minSpawnDelay, maxSpawnDelay));
+        StartCoroutine(Wait());
+    }
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 }

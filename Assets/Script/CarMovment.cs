@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class CarMovement : MonoBehaviour
 {
-    public float minSpeed, maxSpeed, cursorSpeed;
+    public float minSpeed, maxSpeed;
+    private float cursorSpeed = 0.1f;
     public LayerMask groundLayer;
     public LayerMask CarMask;
     [SerializeField] bool IsLeft;
@@ -13,10 +14,10 @@ public class CarMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isMoving = true;
     private bool isMouseDown = false;
-    Collider collider;
+    Collider col;
     void Start()
     {
-        collider = GetComponent<Collider>();
+        col = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
         velocity = new Vector3(Random.Range(minSpeed, maxSpeed),0, 0);
     }
@@ -75,10 +76,10 @@ public class CarMovement : MonoBehaviour
     {
         if (IsLeft) 
         {
-            Vector3 centerL = new Vector3(collider.bounds.center.x - collider.bounds.extents.x, transform.position.y, transform.position.z);
+            Vector3 centerL = new Vector3(col.bounds.center.x - col.bounds.extents.x, transform.position.y, transform.position.z);
             return Physics.Raycast(centerL, Vector3.left, 3, CarMask); 
         }
-        Vector3 centerR = new Vector3(collider.bounds.center.x + collider.bounds.extents.x, transform.position.y, transform.position.z);
+        Vector3 centerR = new Vector3(col.bounds.center.x + col.bounds.extents.x, transform.position.y, transform.position.z);
         return Physics.Raycast(centerR, Vector3.right, 3, CarMask);
     }
     private bool IsOnGround()

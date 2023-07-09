@@ -120,15 +120,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 819f28bc26a420d47897b5e562433263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 2
-  maxSpeed: 4
+  minSpeed: 3
+  maxSpeed: 5
   cursorSpeed: 0.05
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   CarMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   IsLeft: 0
 --- !u!54 &9122611123230458250
 Rigidbody:
