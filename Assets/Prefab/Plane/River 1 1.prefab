@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 7402084499279187579}
   - component: {fileID: 8480918133540095741}
   - component: {fileID: 7143465376562540576}
+  - component: {fileID: 2390794293935888557}
+  - component: {fileID: 5665363587299336019}
   m_Layer: 4
   m_Name: RiverWith5Woods 1
   m_TagString: Untagged
@@ -137,8 +139,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.1180396, y: 2.4030147, z: 0.01361062}
+  m_Center: {x: -5.28601e-15, y: 0.7015074, z: 0.15381803}
 --- !u!114 &7143465376562540576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +154,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _particleSystem: {fileID: 4038441363147111579}
+--- !u!65 &2390794293935888557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639916004526690399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7783754, y: 1, z: 1}
+  m_Center: {x: 0.11081232, y: 0, z: -1.5315491e-16}
+--- !u!65 &5665363587299336019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639916004526690399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1180396, y: 3.0470207, z: 0.019770415}
+  m_Center: {x: 2.6952961e-15, y: 1.02351, z: -0.18298686}
 --- !u!1 &3412174703152185430
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3412174703152185430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19, y: 0.15, z: 0.74}
+  m_LocalPosition: {x: -15, y: 0.15, z: 0.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -224,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3540908180467499534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19, y: 0.15, z: 2.2}
+  m_LocalPosition: {x: -15, y: 0.15, z: 2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
