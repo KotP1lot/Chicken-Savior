@@ -181,7 +181,13 @@ public class Chicken : MonoBehaviour
                 IsDead = true;
                 transform.position = new Vector3(transform.position.x, 0.15f, transform.position.z);
                 break;
+            case TypeDie.Water:
+                IsDead = true;
+                Vector3 pos = transform.position;
+                transform.position = pos;
+                break;
         }
+
     }
     private void OnEnable()
     {
