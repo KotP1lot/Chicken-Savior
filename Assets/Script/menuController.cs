@@ -9,7 +9,7 @@ public class menuController : MonoBehaviour
     public Slider volumeSlider;
     public GameObject[] buttonsToHide;
     public GameObject buttonBack;
-    public string sceneName;
+    public int sceneInd;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class menuController : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneInd);
     }
     public void ToggleVolumeSlider()
     {
