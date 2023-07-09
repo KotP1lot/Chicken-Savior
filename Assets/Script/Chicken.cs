@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Chicken : MonoBehaviour
 {
@@ -16,9 +17,11 @@ public class Chicken : MonoBehaviour
     [SerializeField] float groundCheckDistance = 0.3f;
     [SerializeField] float barierCheckDistance = 2f;
     Collider col;
+    Vector3 pos;
     EventSyst syst;
     bool IsGrounded = false;
     bool IsDead = false;
+    bool isDeadByWater = false;
 
     int random = 0;
     
@@ -104,6 +107,10 @@ public class Chicken : MonoBehaviour
                 }
             }
         }
+        if(isDeadByWater) 
+        {
+            transform.position = new Vector3(pos.x, transform.position.y, pos.z);
+        }
     }
 
     void MoveChicken(Side side) 
@@ -134,23 +141,23 @@ public class Chicken : MonoBehaviour
             case Side.Left:
                 Vector3 centerL = new Vector3(col.bounds.center.x - col.bounds.extents.x, transform.position.y, transform.position.z);
                 Debug.DrawLine(centerL, centerL + new Vector3(-2, 0, 0), Color.red, 5);
-                return Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, 0.95f), Vector3.left, barierCheckDistance, BarierMask)
-                      || Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, -0.95f), Vector3.left, barierCheckDistance, BarierMask)
+                return Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, 1f), Vector3.left, barierCheckDistance, BarierMask)
+                      || Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, -1f), Vector3.left, barierCheckDistance, BarierMask)
                       || Physics.Raycast(centerL + new Vector3(-0.1f, 0.5f, 0f), Vector3.left, barierCheckDistance, BarierMask);
 
             case Side.Right:
                 Vector3 centerR = new Vector3(col.bounds.center.x + col.bounds.extents.x, transform.position.y, transform.position.z);
                 Debug.DrawLine(centerR, centerR + new Vector3(2, 0, 0), Color.red, 5);
-                return Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, 0.95f), Vector3.right, barierCheckDistance, BarierMask)
-                    || Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, -0.95f), Vector3.right, barierCheckDistance, BarierMask)
+                return Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, 1f), Vector3.right, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, -1f), Vector3.right, barierCheckDistance, BarierMask)
                     || Physics.Raycast(centerR + new Vector3(0.1f, 0.5f, 0f), Vector3.right, barierCheckDistance, BarierMask);
 
             default:
             
                 Vector3 centerF = new Vector3(transform.position.x, transform.position.y, col.bounds.center.z + col.bounds.extents.z);
                 Debug.DrawLine(centerF, centerF + new Vector3(0, 0, 2), Color.red,5);
-                return Physics.Raycast(centerF + new Vector3(-0.95f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask)
-                    || Physics.Raycast(centerF + new Vector3(0.95f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask)
+                return Physics.Raycast(centerF + new Vector3(-1f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask)
+                    || Physics.Raycast(centerF + new Vector3(1f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask)
                     || Physics.Raycast(centerF + new Vector3(0f, 0.5f, 0.1f), Vector3.forward, barierCheckDistance, BarierMask);
         }
 
@@ -159,9 +166,15 @@ public class Chicken : MonoBehaviour
     bool CheckIsGround()
     {
         Vector3 position = transform.position;
-        return Physics.Raycast(position + new Vector3(0f, 0f, 0.9f), Vector3.down, groundCheckDistance, GroundMask)
-            || Physics.Raycast(position + new Vector3(0f, 0f, -0.9f), Vector3.down, groundCheckDistance, GroundMask)
-            || Physics.Raycast(position + new Vector3(0f, 0f, 0f), Vector3.down, groundCheckDistance, GroundMask);
+        return Physics.Raycast(position + new Vector3(0f, 0f, 1f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(0f, 0f, -1f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(0f, 0f, 0f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(1f, 0f, 1f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(1f, 0f, 0f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(1f, 0f, -1f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(-1f, 0f, 1f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(-1f, 0f, 0f), Vector3.down, groundCheckDistance, GroundMask)
+            || Physics.Raycast(position + new Vector3(-1f, 0f, -1f), Vector3.down, groundCheckDistance, GroundMask);
     }
 
     void PositionAndRotation(Vector3 newRotation) 
@@ -183,8 +196,9 @@ public class Chicken : MonoBehaviour
                 break;
             case TypeDie.Water:
                 IsDead = true;
-                Vector3 pos = transform.position;
-                transform.position = pos;
+                col.isTrigger = true;
+                pos = transform.position;
+                isDeadByWater = true;
                 break;
         }
 
