@@ -57,8 +57,16 @@ PrefabInstance:
       value: WaterLily Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3265aa9dd07ab1e4f89944519ad17235, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3265aa9dd07ab1e4f89944519ad17235, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 3265aa9dd07ab1e4f89944519ad17235, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

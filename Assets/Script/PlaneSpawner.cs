@@ -10,19 +10,23 @@ public class PlaneSpawner : MonoBehaviour
     int NextSpawnPosZ = 12;
     void Start()
     {
-        SpawnNewPlane();
-        SpawnNewPlane();
+        SpawnNewPlane(true);
+        SpawnNewPlane(true);
     }
-    public void SpawnNewPlane() 
+    public void SpawnNewPlane(bool isStart) 
     {
-        int random = Random.Range(0, 101);
-        if (random <= 70)
+        if (isStart) SetPlane(empty);
+        else
         {
-            SetPlane(plane);
-        }
-        else 
-        {
-            SetPlane(empty);
+            int random = Random.Range(0, 101);
+            if (random <= 70)
+            {
+                SetPlane(plane);
+            }
+            else
+            {
+                SetPlane(empty);
+            }
         }
  
         NextSpawnPosZ += 6;
@@ -37,11 +41,5 @@ public class PlaneSpawner : MonoBehaviour
             Destroy(AllPlanes[0]);
             AllPlanes.RemoveAt(0);
         }
-    }
-    public void Restart() 
-    {
-        AllPlanes.Clear();
-        NextSpawnPosZ = 12;
-        SpawnNewPlane();
     }
 }

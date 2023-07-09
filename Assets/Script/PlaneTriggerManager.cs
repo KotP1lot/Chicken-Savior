@@ -16,7 +16,7 @@ public class PlaneTriggerManager : MonoBehaviour
         {
             if (!isAlreadySpawnl) 
             {
-                planeSpawner.SpawnNewPlane();
+                planeSpawner.SpawnNewPlane(false);
                 isAlreadySpawnl = true;
             }
         }
